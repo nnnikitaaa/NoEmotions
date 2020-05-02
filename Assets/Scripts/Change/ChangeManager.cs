@@ -14,11 +14,11 @@ public class ChangeManager : MonoBehaviour
     {
         #region Getting
         healthBar = transform.Find("Health Bar");
-        healthSlider = Instantiate(GameManager.instance.healthSliderPrefab, healthBar.position, Quaternion.identity);
         #endregion
     }
     private void Start()
     {
+        healthSlider = Instantiate(GameManager.instance.healthSliderPrefab, healthBar.position, Quaternion.identity);
         gameObject.layer = GameManager.PLAYER_NORMAL_LAYER;
     }
     private void Update()
