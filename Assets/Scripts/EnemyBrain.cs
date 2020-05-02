@@ -23,6 +23,10 @@ public class EnemyBrain : MonoBehaviour
 
         #endregion
     }
+    private void Start()
+    {
+        delay = 1f;
+    }
     private void Update()
     {
         switch (state)
