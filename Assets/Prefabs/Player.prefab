@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1145007666}
   - component: {fileID: 1145007668}
   - component: {fileID: 1145007667}
+  - component: {fileID: 1145007669}
   m_Layer: 9
   m_Name: Trail Particle System
   m_TagString: Untagged
@@ -4812,6 +4813,20 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &1145007669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145007665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77aa965e5fc537419bdf5c03c5bc83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  changedColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1755644361
 GameObject:
   m_ObjectHideFlags: 0
@@ -4964,7 +4979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac372d2e4b3a53147b8c593de048dbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.397
+  radius: 0.3
   groundTime: 0.15
 --- !u!114 &1601684629263690139
 MonoBehaviour:
@@ -4993,7 +5008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9c9a91d148fda44a1503a15686bde7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTime: 5
+  changeTime: 60
 --- !u!114 &1601684629263690138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5225,7 +5240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601684629573940388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.825, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1601684629263690137}
@@ -5352,7 +5367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601684630043696846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.229, z: 0}
+  m_LocalPosition: {x: -0.015, y: -0.366, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1601684629263690137}

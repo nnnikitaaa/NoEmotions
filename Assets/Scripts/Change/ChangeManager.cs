@@ -33,6 +33,10 @@ public class ChangeManager : MonoBehaviour
             }
         }
     }
+    public void RestoreHealth()
+    {
+        healthSlider.value = healthSlider.maxValue;
+    }
     public void Change()
     {
         if (healthSlider.value > 0)

@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Friend
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - PlayerNormal
   - PlayerChanged
   - Enemy
-  - 
-  - 
+  - Friend
+  - EntityBase
   - 
   - 
   - 

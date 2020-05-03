@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 [RequireComponent(typeof(AnimationManager))]
 [RequireComponent(typeof(RigidbodyMovement))]
-public class EnemyBrain : MonoBehaviour
+public class WonderingBrain : MonoBehaviour
 {
     [SerializeField] [Range(-1f, 1f)] float direction;
     [SerializeField] float waitTime;

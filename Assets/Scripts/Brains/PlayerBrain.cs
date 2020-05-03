@@ -72,6 +72,17 @@ public class PlayerBrain : MonoBehaviour
         rbMove.velocity = velocity;
         animManager.Move(velocity);
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Friend"))
+        {
+            changeManager.RestoreHealth();
+        }
+        else if (other.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+    }
     private void OnDisable()
     {
         inputActions?.Disable();
