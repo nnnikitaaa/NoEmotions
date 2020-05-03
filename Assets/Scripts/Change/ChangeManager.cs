@@ -76,5 +76,6 @@ public class ChangeManager : MonoBehaviour
         {
             gameObject.layer = GameManager.PLAYER_NORMAL_LAYER;
         }
+        SoudManager.instance.Play("Change");
     }
 }

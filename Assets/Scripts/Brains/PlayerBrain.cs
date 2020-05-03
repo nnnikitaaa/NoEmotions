@@ -61,6 +61,7 @@ public class PlayerBrain : MonoBehaviour
         {
             rbMove.Jump();
             waitTime = 0;
+            SoudManager.instance.Play("Jump");
         }
     }
     bool Ground()
@@ -80,11 +81,13 @@ public class PlayerBrain : MonoBehaviour
         }
         else if (other.CompareTag("Hurt"))
         {
+            SoudManager.instance.Play("Hurt");
             Die();
         }
         else if (other.CompareTag("Portal"))
         {
             LevelLoader.instance.LoadNextLevel(1f);
+            SoudManager.instance.Play("Succed");
             Destroy(other);
         }
     }
