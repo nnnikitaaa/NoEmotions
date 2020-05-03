@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 5790330568051395760, guid: 92c307daa2eb1a04ba1111341ca85486, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5790330568051395762, guid: 92c307daa2eb1a04ba1111341ca85486, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

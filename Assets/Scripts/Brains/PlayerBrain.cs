@@ -82,6 +82,11 @@ public class PlayerBrain : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else if (other.CompareTag("Portal"))
+        {
+            LevelLoader.instance.ReloadLevel();
+            Destroy(other);
+        }
     }
     private void OnDisable()
     {

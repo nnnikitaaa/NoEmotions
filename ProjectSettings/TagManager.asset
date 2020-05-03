@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Friend
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -46,12 +47,18 @@ TagManager:
   - name: Light
     uniqueID: 2898700961
     locked: 0
+  - name: Entity
+    uniqueID: 2543337657
+    locked: 0
   - name: Player
     uniqueID: 2686557981
     locked: 0
-  - name: Enemy
-    uniqueID: 2543337657
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 180924821
+    locked: 0
+  - name: UI
+    uniqueID: 491882499
     locked: 0

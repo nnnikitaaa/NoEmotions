@@ -14,6 +14,7 @@ public class ChangeManager : MonoBehaviour
     {
         #region Getting
         healthBar = transform.Find("Health Bar");
+        onChange = null;
         #endregion
     }
     private void Start()
