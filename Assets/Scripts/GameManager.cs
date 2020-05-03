@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Slider healthSlider;
     public Slider healthSliderPrefab { get { return healthSlider; } }
+    [SerializeField] GameObject deathExplosionPrefab;
+    public GameObject deathExplosion { get { return deathExplosionPrefab; } }
 
     private void Awake()
     {

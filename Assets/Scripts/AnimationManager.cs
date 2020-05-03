@@ -8,6 +8,7 @@ public class AnimationManager : MonoBehaviour
     int runTrigger;
     int landTrigger;
     int runBool;
+    int dieTrigger;
 
     float direction;
     private void Awake()
@@ -24,7 +25,12 @@ public class AnimationManager : MonoBehaviour
         idleTrigger = Animator.StringToHash("Idle");
         runTrigger = Animator.StringToHash("Run");
         landTrigger = Animator.StringToHash("Land");
+        dieTrigger = Animator.StringToHash("Die");
         runBool = Animator.StringToHash("RunBool");
+    }
+    public void Die()
+    {
+        animator.SetTrigger(dieTrigger);
     }
     public void Move(float dir)
     {

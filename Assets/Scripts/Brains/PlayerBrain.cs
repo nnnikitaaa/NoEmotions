@@ -78,15 +78,23 @@ public class PlayerBrain : MonoBehaviour
         {
             changeManager.RestoreHealth();
         }
-        else if (other.CompareTag("Enemy"))
+        else if (other.CompareTag("Hurt"))
         {
-            Destroy(gameObject);
+            Die();
         }
         else if (other.CompareTag("Portal"))
         {
-            LevelLoader.instance.ReloadLevel();
+            LevelLoader.instance.ReloadLevel(1f);
             Destroy(other);
         }
+    }
+    void Die()
+    {
+        LevelLoader.instance.ReloadLevel(2f);
+        changeManager.Die();
+        animManager.Die();
+        rbMove.StopForever();
+        Destroy(this);
     }
     private void OnDisable()
     {

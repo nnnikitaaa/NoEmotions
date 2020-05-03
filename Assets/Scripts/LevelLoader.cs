@@ -16,22 +16,27 @@ public class LevelLoader : MonoBehaviour
 
         #endregion
     }
-    public void LoadLevel(int id)
+    public void LoadLevel(int id, float timeToWait)
     {
-        StartCoroutine(Load(id));
+        StartCoroutine(Load(id, timeToWait));
     }
-    public void LoadNextLevel()
+    public void LoadNextLevel(float timeToWait)
     {
-        LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        LoadLevel(SceneManager.GetActiveScene().buildIndex + 1, timeToWait);
     }
-    public void ReloadLevel()
+    public void ReloadLevel(float timeToWait)
     {
-        LoadLevel(SceneManager.GetActiveScene().buildIndex);
+        LoadLevel(SceneManager.GetActiveScene().buildIndex, timeToWait);
     }
-    IEnumerator Load(int id)
+    IEnumerator Load(int id, float timeToWait)
     {
+        if (timeToWait < 1)
+        {
+            timeToWait = 1;
+        }
+        yield return new WaitForSeconds(timeToWait - 1);
         animator.SetTrigger("Go");
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(id);
     }
 

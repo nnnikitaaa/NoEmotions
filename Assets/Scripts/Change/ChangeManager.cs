@@ -24,26 +24,45 @@ public class ChangeManager : MonoBehaviour
     }
     private void Update()
     {
-        healthSlider.transform.position = healthBar.position;
-        if (inside)
+        if (healthSlider)
         {
-            healthSlider.value -= 1 / changeTime * Time.deltaTime;
-            if (healthSlider.value == 0)
+            healthSlider.transform.position = healthBar.position;
+            if (inside)
             {
-                ActualChange();
+                healthSlider.value -= 1 / changeTime * Time.deltaTime;
+                if (healthSlider.value == 0)
+                {
+                    ActualChange();
+                }
             }
         }
     }
     public void RestoreHealth()
     {
-        healthSlider.value = healthSlider.maxValue;
+        if (healthSlider)
+            healthSlider.value = healthSlider.maxValue;
     }
     public void Change()
     {
-        if (healthSlider.value > 0)
+        if (healthSlider)
         {
-            ActualChange();
+            if (healthSlider.value > 0)
+            {
+                ActualChange();
+            }
         }
+    }
+    public void Die()
+    {
+        GameObject explosion = Instantiate(GameManager.instance.deathExplosion, transform.position, Quaternion.identity);
+        if (inside)
+        {
+            ParticleSystem.MainModule mainModule = explosion.GetComponent<ParticleSystem>().main;
+            mainModule.startColor = new ParticleSystem.MinMaxGradient(Color.black);
+        }
+        Destroy(healthSlider.gameObject);
+
+        Destroy(explosion, 3f);
     }
     void ActualChange()
     {

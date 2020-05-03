@@ -30,4 +30,10 @@ public class RigidbodyMovement : MonoBehaviour
         rbVelocity.y = jumpForce;
         rb.velocity = rbVelocity;
     }
+    public void StopForever()
+    {
+        rb.velocity = Vector2.zero;
+        velocity = 0;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+    }
 }
