@@ -25,7 +25,7 @@ public class LevelLoader : MonoBehaviour
         int currentId = SceneManager.GetActiveScene().buildIndex;
         if (currentId >= SceneManager.sceneCountInBuildSettings - 1)
         {
-            LoadLevel(0, timeToWait);
+            LoadLevel(1, timeToWait);
 
         }
         else
