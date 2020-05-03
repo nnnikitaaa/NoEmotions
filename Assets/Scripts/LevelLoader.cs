@@ -22,7 +22,17 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadNextLevel(float timeToWait)
     {
-        LoadLevel(SceneManager.GetActiveScene().buildIndex + 1, timeToWait);
+        int currentId = SceneManager.GetActiveScene().buildIndex;
+        if (currentId >= SceneManager.sceneCountInBuildSettings - 1)
+        {
+            LoadLevel(0, timeToWait);
+
+        }
+        else
+        {
+            LoadLevel(SceneManager.GetActiveScene().buildIndex + 1, timeToWait);
+        }
+
     }
     public void ReloadLevel(float timeToWait)
     {

@@ -84,7 +84,7 @@ public class PlayerBrain : MonoBehaviour
         }
         else if (other.CompareTag("Portal"))
         {
-            LevelLoader.instance.ReloadLevel(1f);
+            LevelLoader.instance.LoadNextLevel(1f);
             Destroy(other);
         }
     }
